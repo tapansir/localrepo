@@ -5,38 +5,38 @@
 .container{
     width: 500px;
     height: 500px;
-    background-color: red;
+    /* background-color: red; */
     margin: 20px auto;
-    animation-name: cercle;
-    animation-duration: 2s;
+    animation-name: circle;
+    animation-duration: 4s;
+    border-radius: 50%;
+    /* animation-iteration-count: infinite; */
+    animation-timing-function: linear;
+    border: 2px solid black;
 }
 
 .box{
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
     background-color:blueviolet;
-    animation-name: circle;
-    animation-duration: 3s;
-    animation-delay: 1s;
-    animation-timing-function:ease-in-out;
+    border-radius: 50%;
+    /* animation-name: circle; */
+    /* animation-duration: 3s; */
+    /* animation-delay: 1s; */
+    /* animation-timing-function:linear; */
     /* animation-iteration-count: infinite; */
-    animation-direction:alternate-reverse;
+    /* animation-direction:normal; */
+    /* animation-fill-mode:forwards; */
 
 }
 @keyframes circle {
-    0%,100%{
-        transform:translate(0,0)
+    0%{
+        transform:rotate(0);
 
     }
-    25%{
-        transform: translate(400px, 0);
 
-    }
-    50%{
-        transform: translate(400px, 400px);
-    }
-    75%{
-        transform: translate(0, 400px);
+    100%{
+        transform: rotate(360deg);
     }
 
 }
