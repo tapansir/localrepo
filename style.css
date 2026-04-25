@@ -3,40 +3,43 @@
     padding: 0;
 }
 .container{
-    width: 500px;
-    height: 500px;
-    /* background-color: red; */
+    width: 80vw;
+    height: 80vh;
     margin: 20px auto;
-    animation-name: circle;
-    animation-duration: 4s;
-    border-radius: 50%;
-    /* animation-iteration-count: infinite; */
     animation-timing-function: linear;
     border: 2px solid black;
+    position: relative;
 }
 
 .box{
-    height: 150px;
-    width: 150px;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
     background-color:blueviolet;
     border-radius: 50%;
-    /* animation-name: circle; */
-    /* animation-duration: 3s; */
-    /* animation-delay: 1s; */
-    /* animation-timing-function:linear; */
-    /* animation-iteration-count: infinite; */
-    /* animation-direction:normal; */
-    /* animation-fill-mode:forwards; */
-
+    animation: bounce 3s  linear infinite , bounce2 1s  ease-out infinite  alternate;
+ 
 }
-@keyframes circle {
-    0%{
-        transform:rotate(0);
-
+@keyframes bounce {
+    from{
+        left: 0;
     }
 
-    100%{
-        transform: rotate(360deg);
+    to {
+        left: 100%;
+    }
+
+}
+
+@keyframes bounce2 {
+    from{
+        bottom: 0;
+    }
+
+    to {
+        bottom: 100%;
     }
 
 }
